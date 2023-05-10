@@ -46,3 +46,29 @@ console.log(resultadoDos);
 
 
 
+//OTRO TIPO DE FUNCIONES
+
+const countries = ["España","Mexico","Japon","Brasil","Francia"];
+
+const edades = [12,32,3,44,67,87,81];
+
+console.log(countries.includes("Mexico"));
+
+
+const existe = edades.some( n => n>55);
+
+console.log(existe);
+
+const existeFind = edades.find(n => n >50);
+
+console.log(existeFind); 
+
+
+//validar todos los elementos de la lista
+const existeEvery = edades.every(n => n !== '');
+console.log(existeEvery);
+
+
+const v2 = edades.reduce((acumulador,edad) => edad +acumulador);
+
+console.log(v2);
