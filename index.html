@@ -1,33 +1,58 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola mundo.js.   EL COMPI SAUL</h1>
+    
+    <h1> JS</h1>
+    <p id="miParrafo"></p>
+    <p id="miParrafoDos">abcd </p>
+    <p class="parrafo">mi Parrafo con class </p>
+    
+    <p class="parrafo" id="miParrafoC"> </p>
 
-    <h2> </h2>
-  <!--<script src="temas.js"></script>
-    <script src="objetos.js"></script>-->
-    <!--<script src="manipularObjetos.js"></script>-->
+    <input id="entrada" type="text">
+    <button id="boton"  >Enviar</button>
+    <script>
+        let doc = document.getElementById('miParrafo');
+        let docDos = document.getElementById('miParrafoDos');
+        doc.innerHTML ="Agregando texto";
+        docDos.innerText="Agregando texto";
+        console.log(doc);
 
-   <!-- <script src="extraerAtributosDuplicadas.js"></script> -->
+        let h1 = document.getElementsByTagName('h1');
+          //document.getElementById("psswd").innerHTML('');
+        console.log(h1);
+        let p = document.querySelectorAll(".parrafo");
+        console.log(p);
+        console.log(p[1].id)
+ 
+        let pd = document.querySelector(".parrafo");
+        console.log(pd.tagName);
+        console.log(pd.classList);
+       
+    </script>
 
-    <!--<script src="unirClonarObjetos.js"></script> -->
-   <!--<script src="arrays.js"></script>-->
-   <!--<script src="trabajandoConArrays.js"></script>-->
-   <!--<script src="extraerDestructuringArrays.js"></script>-->
-    <!--<script src="iterarArrays.js"></script>-->
-    <!--<script src="funciones.js"></script>-->
-    <script src="functionExpresion.js"></script>
-    <script src="arrowFunction.js"></script>
+    <script> 
+        let inpt = document.querySelector("#entrada");
+        let value = inpt.value;
 
-    <script src="Condicionales.js"></script>
-    <script src="switchcase.js"></script>
-
+        let a = document.querySelector("#boton");
+        let b = a.addEventListener( "click", ()=>{
+            doc.innerHTML="clickeando" + inpt.value;
+            
+            //alert("clickeado");
+        } );
+    </script>
+    <style>
+        .parrafo{
+            font-size: 20pt;
+            color: blueviolet;
+        }
+    </style>
 </body>
 </html>
